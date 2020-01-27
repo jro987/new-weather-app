@@ -38,26 +38,31 @@ body {
     margin-top:20px!important;
 }
 .location {
-    font-size:20px;
+    font-size:24px;
     margin:25px 0 20px 0!important;
 }
 .weather-output label {
     width:150px;
-    font-size:1rem!important;
+    font-size:16px!important;
     color:#bbbbbb!important;
     text-align:right;
     display:inline-block;
+    font-size:18px;
 }
 .weather-output span {
     width:150px;
     text-align:left;
     display:inline-block;
+    font-size:18px;
 }
 .day-info {
     padding:10px 10px!important;
 }
+.day-info p {
+    font-size:16px;
+}
 .day-title {
-    font-size:18px;
+    font-size:18px!important;
     border-bottom:1px solid #333333;
     padding-bottom:10px;
 }
