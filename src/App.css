@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Sans+Condensed&display=swap');
+
+* {
+    font-family:"Fira Sans", Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color:#333333;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.top-title {
+    margin-bottom:0!important;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.title-top-text {
+    font-family:"Fira Sans Condensed", Arial, Helvetica, sans-serif;
+    font-size:36px;
+    margin-bottom:10px;
 }
-
-.App-link {
-  color: #61dafb;
+.title-bottom-text {
+    font-family:"Fira Sans Condensed", Arial, Helvetica, sans-serif;
+    font-size:20px;
+    margin-top:0px;
+    margin-bottom:30px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info-form {
+    background-color:#555555;
+    padding-top:20px!important;
+    padding-bottom:30px!important;
+}
+.weather-output {
+    background-color:#333333;
+    display:block;
+}
+.weather-output p {
+    text-align:center;
+    margin:10px 0;
+}
+.top-margin {
+    margin-top:20px!important;
+}
+.location {
+    font-size:20px;
+    margin:25px 0 20px 0!important;
+}
+.weather-output label {
+    width:150px;
+    font-size:1rem!important;
+    color:#bbbbbb!important;
+    text-align:right;
+    display:inline-block;
+}
+.weather-output span {
+    width:150px;
+    text-align:left;
+    display:inline-block;
+}
+.day-info {
+    padding:10px 10px!important;
+}
+.day-title {
+    font-size:18px;
+    border-bottom:1px solid #333333;
+    padding-bottom:10px;
+}
+.bottom-margin {
+    margin-bottom:15px!important;
 }
