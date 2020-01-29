@@ -4,7 +4,6 @@ import Title from "./components/Title";
 import CityStateForm from "./components/CityStateForm";
 import Weather from "./components/Weather";
 import "./App.css";
-import { Button, Card, Row, Col } from "react-materialize";
 
 const API_KEY = "5883a3505473456387b8c8bb14b99bab";
 
@@ -42,7 +41,8 @@ class App extends React.Component {
     e.preventDefault();
     const city = e.target.elements.city.value;
     const stateCode = e.target.elements.stateCode.value;
-    const zipCode = e.target.elements.zipCode.value; 
+    const zipCode = e.target.elements.zipCode.value;
+
     if (city && stateCode) {
       const current_api_call = await fetch(`http://api.weatherbit.io/v2.0/current?city=${city},${stateCode}&key=${API_KEY}&units=I`);
       const current_api_resp = await current_api_call.json();
