@@ -47,11 +47,9 @@ class App extends React.Component {
       const current_api_call = await fetch(`http://api.weatherbit.io/v2.0/current?city=${city},${stateCode}&key=${API_KEY}&units=I`);
       const current_api_resp = await current_api_call.json();
       const forecast_api_call = await fetch(`http://api.weatherbit.io/v2.0/forecast/daily?city=${city},${stateCode}&key=${API_KEY}&days=7&units=I`);
-      const forecast_api_resp = await forecast_api_call.json(); 
-      console.log(current_api_resp);
-      console.log(forecast_api_resp);
+      const forecast_api_resp = await forecast_api_call.json();
       this.setState({
-        temperature: current_api_resp.data[0].temp,
+        temperature: Math.round(current_api_resp.data[0].temp),
         city: current_api_resp.data[0].city_name,
         stateCode: current_api_resp.data[0].state_code,
         description: current_api_resp.data[0].weather.description,
@@ -60,32 +58,32 @@ class App extends React.Component {
         windSpeed: current_api_resp.data[0].wind_spd,
         windDirection: current_api_resp.data[0].wind_cdir,
         dayOneDescription: forecast_api_resp.data[0].weather.description,
-        dayOneMaxTemp: forecast_api_resp.data[0].high_temp,
-        dayOneMinTemp: forecast_api_resp.data[0].min_temp,
+        dayOneMaxTemp: Math.round(forecast_api_resp.data[0].high_temp),
+        dayOneMinTemp: Math.round(forecast_api_resp.data[0].min_temp),
         dayOneDate: forecast_api_resp.data[0].datetime,
         dayTwoDescription: forecast_api_resp.data[1].weather.description,
-        dayTwoMaxTemp: forecast_api_resp.data[1].high_temp,
-        dayTwoMinTemp: forecast_api_resp.data[1].min_temp,
+        dayTwoMaxTemp: Math.round(forecast_api_resp.data[1].high_temp),
+        dayTwoMinTemp: Math.round(forecast_api_resp.data[1].min_temp),
         dayTwoDate: forecast_api_resp.data[1].datetime,
         dayThreeDescription: forecast_api_resp.data[2].weather.description,
-        dayThreeMaxTemp: forecast_api_resp.data[2].high_temp,
-        dayThreeMinTemp: forecast_api_resp.data[2].min_temp,
+        dayThreeMaxTemp: Math.round(forecast_api_resp.data[2].high_temp),
+        dayThreeMinTemp: Math.round(forecast_api_resp.data[2].min_temp),
         dayThreeDate: forecast_api_resp.data[2].datetime,
         dayFourDescription: forecast_api_resp.data[3].weather.description,
-        dayFourMaxTemp: forecast_api_resp.data[3].high_temp,
-        dayFourMinTemp: forecast_api_resp.data[3].min_temp,
+        dayFourMaxTemp: Math.round(forecast_api_resp.data[3].high_temp),
+        dayFourMinTemp: Math.round(forecast_api_resp.data[3].min_temp),
         dayFourDate: forecast_api_resp.data[3].datetime,
         dayFiveDescription: forecast_api_resp.data[4].weather.description,
-        dayFiveMaxTemp: forecast_api_resp.data[4].high_temp,
-        dayFiveMinTemp: forecast_api_resp.data[4].min_temp,
+        dayFiveMaxTemp: Math.round(forecast_api_resp.data[4].high_temp),
+        dayFiveMinTemp: Math.round(forecast_api_resp.data[4].min_temp),
         dayFiveDate: forecast_api_resp.data[4].datetime,
         daySixDescription: forecast_api_resp.data[5].weather.description,
-        daySixMaxTemp: forecast_api_resp.data[5].high_temp,
-        daySixMinTemp: forecast_api_resp.data[5].min_temp,
+        daySixMaxTemp: Math.round(forecast_api_resp.data[5].high_temp),
+        daySixMinTemp: Math.round(forecast_api_resp.data[5].min_temp),
         daySixDate: forecast_api_resp.data[5].datetime,
         daySevenDescription: forecast_api_resp.data[6].weather.description,
-        daySevenMaxTemp: forecast_api_resp.data[6].high_temp,
-        daySevenMinTemp: forecast_api_resp.data[6].min_temp,
+        daySevenMaxTemp: Math.round(forecast_api_resp.data[6].high_temp),
+        daySevenMinTemp: Math.round(forecast_api_resp.data[6].min_temp),
         daySevenDate: forecast_api_resp.data[6].datetime,
         error: undefined
       });
@@ -93,9 +91,7 @@ class App extends React.Component {
       const current_api_call = await fetch(`http://api.weatherbit.io/v2.0/current?postal_code=${zipCode}&key=${API_KEY}&units=I`);
       const current_api_resp = await current_api_call.json();
       const forecast_api_call = await fetch(`http://api.weatherbit.io/v2.0/forecast/daily?postal_code=${zipCode}&key=${API_KEY}&days=7&units=I`);
-      const forecast_api_resp = await forecast_api_call.json(); 
-      console.log(current_api_resp);
-      console.log(forecast_api_resp);
+      const forecast_api_resp = await forecast_api_call.json();
       this.setState({
         temperature: current_api_resp.data[0].temp,
         city: current_api_resp.data[0].city_name,
